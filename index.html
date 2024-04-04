@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原神祈愿数据转换&nbsp;-&nbsp;Paimon.moe&nbsp;Excel文件转UIGF&nbsp;Json文件</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="backgroundColor"></div>
+    <h2>原神祈愿数据转换&nbsp;-&nbsp;Paimon.moe&nbsp;Excel文件转UIGF&nbsp;Json文件</h2>
+    <h3>从Excel导入</h3>
+    <ol>
+        <li>
+            <p>前往<a href="https://paimon.moe/wish" target="_blank">paimon.moe/wish</a>，单击“设置”-“导出到Excel”</p>
+            <div class="image"><img src="img/img-step1.png" alt="步骤一示意图" draggable="false"></div>
+        </li>
+        <li>
+            <p>在下方提交保存的Excel文件，输入祈愿数据所属账号的uid，待转换完毕后会自动保存UIGF&nbsp;Json文件</p>
+            <div id="fileUpload">
+                <button type="button">选择文件
+                    <input type="file" id="fileInput" accept=".xlsx, .xls" />
+                </button>
+            </div>
+            <div id="uidInput" style="display: none;"> 
+                <form>
+                    <label for="number">请输入uid：</label>
+                    <input type="number" class="inputBox" id="number" name="number" required />
+                    <button type= "button" onclick="input_uid()">提交</button>
+                </form>
+            </div>
+        </li>
+        
+    </ol>
+
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
+    <script src="js/process.js"></script>
+</body>
+</html>
